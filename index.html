@@ -1,51 +1,175 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Selam Tachbel | Portfolio</title>
+
+  <style>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+      font-family: "Segoe UI", Arial, sans-serif;
+    }
+
+    body {
+      background: #f4f7fb;
+      color: #1f2937;
+      line-height: 1.6;
+    }
+
+    header {
+      background: linear-gradient(135deg, #0f2a44, #1e4f7a);
+      color: white;
+      padding: 70px 10%;
+      text-align: center;
+    }
+
+    header h1 {
+      font-size: 46px;
+      margin-bottom: 10px;
+    }
+
+    header h2 {
+      font-size: 22px;
+      font-weight: 400;
+      margin-bottom: 20px;
+      color: #dbeafe;
+    }
+
+    header p {
+      max-width: 800px;
+      margin: auto;
+      font-size: 17px;
+    }
+
+    nav {
+      background: white;
+      padding: 15px;
+      text-align: center;
+      box-shadow: 0 2px 10px rgba(0,0,0,0.08);
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav a {
+      margin: 0 15px;
+      text-decoration: none;
+      color: #0f2a44;
+      font-weight: 600;
+    }
+
+    section {
+      padding: 60px 10%;
+    }
+
+    .section-title {
+      font-size: 30px;
+      color: #0f2a44;
+      margin-bottom: 25px;
+      text-align: center;
+    }
+
+    .about-box, .contact-box {
+      background: white;
+      padding: 30px;
+      border-radius: 14px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      max-width: 900px;
+      margin: auto;
+    }
+
+    .skills-grid, .projects-grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(230px, 1fr));
+      gap: 20px;
+    }
+
+    .skill-card, .project-card {
+      background: white;
+      padding: 25px;
+      border-radius: 14px;
+      box-shadow: 0 5px 18px rgba(0,0,0,0.08);
+      transition: transform 0.3s ease;
+    }
+
+    .skill-card:hover, .project-card:hover {
+      transform: translateY(-6px);
+    }
+
+    .project-card h3 {
+      color: #123a63;
+      margin-bottom: 10px;
+    }
+
+    .project-card span {
+      display: inline-block;
+      margin-top: 12px;
+      padding: 6px 12px;
+      background: #e0ecff;
+      color: #123a63;
+      border-radius: 20px;
+      font-size: 13px;
+      font-weight: 600;
+    }
+
+    .contact-box a {
+      color: #123a63;
+      font-weight: 600;
+      text-decoration: none;
+    }
+
+    footer {
+      background: #0f2a44;
+      color: white;
+      text-align: center;
+      padding: 20px;
+      margin-top: 40px;
+    }
+  </style>
 </head>
+
 <body>
-  <h1>Selam Tachbel</h1>
-  <h2>IT Specialist | MSSE Student | AI & Software Engineering Learner</h2>
 
-  <p>
-    I am an experienced IT Specialist with more than 10 years of experience in
-    IT support, customer service, technical operations, and digital technology.
-    I am currently pursuing a Master of Software Engineering (MSSE) at Quantic
-    School of Business and Technology.
-  </p>
+  <header>
+    <h1>Selam Tachbel</h1>
+    <h2>IT Specialist | MSSE Student | AI & Software Engineering Learner</h2>
+    <p>
+      Experienced IT professional with 10+ years of background in technical support,
+      customer service, IT operations, and digital technology. Currently pursuing a
+      Master of Software Engineering at Quantic School of Business and Technology.
+    </p>
+  </header>
 
-  <h2>Projects</h2>
+  <nav>
+    <a href="#about">About</a>
+    <a href="#skills">Skills</a>
+    <a href="#projects">Projects</a>
+    <a href="#contact">Contact</a>
+  </nav>
 
-  <h3>AI Skin Analysis Web Application</h3>
-  <p>
-    A school and personal learning project focused on using AI concepts to analyze
-    skin-related images and provide digital support features.
-  </p>
+  <section id="about">
+    <h2 class="section-title">About Me</h2>
+    <div class="about-box">
+      <p>
+        I am an IT Specialist with strong experience in IT support, service desk operations,
+        customer support, system troubleshooting, and team supervision. I enjoy learning
+        modern technologies and building practical projects in Artificial Intelligence,
+        Data Analysis, Software Engineering, and web applications.
+      </p>
+      <br>
+      <p>
+        My goal is to grow in technology-focused roles, especially in areas such as digital
+        banking, software engineering, AI solutions, and IT operations.
+      </p>
+    </div>
+  </section>
 
-  <h3>RAG-Based AI Assistant</h3>
-  <p>
-    An AI application that retrieves information from documents and generates
-    responses with citations.
-  </p>
-
-  <h3>Machine Learning Malware Detection Project</h3>
-  <p>
-    A machine learning project focused on malware detection using Python and Flask.
-  </p>
-
-  <h3>Data Analysis Projects</h3>
-  <p>
-    Academic and learning projects using SQL, Excel, and data analysis concepts.
-  </p>
-
-  <h2>Skills</h2>
-  <p>
-    IT Support, Customer Service, Technical Troubleshooting, Data Analysis,
-    AI Fundamentals, Software Engineering, CRM Systems, Team Leadership.
-  </p>
-
-  <h2>Contact</h2>
-  <p>Email: selamtachbel450@gmail.com</p>
-  <p>GitHub: github.com/selamtachbel</p>
-</body>
-</html>
+  <section id="skills">
+    <h2 class="section-title">Core Skills</h2>
+    <div class="skills-grid">
+      <div class="skill-card">IT Support & Troubleshooting</div>
+      <div class="skill-card">Customer Service & CRM</div>
+      <div class="skill-card">Data Analysis with SQL & Excel</div>
