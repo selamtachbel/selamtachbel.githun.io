@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>Weather App</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<section class="section" style="max-width:720px;margin:0 auto;">
+<h1 class="section__title">🌦️ Weather</h1>
+
+<form id="form" autocomplete="off" style="display:flex; gap:10px;">
+<input id="city" type="text" placeholder="Enter city (e.g., Addis Ababa)"
+style="flex:1; padding:10px; border:1px solid var(--border); border-radius:10px; background:var(--card); color:var(--text);" />
+<button class="btn primary" type="submit">Search</button>
+</form>
+
+<div id="box" class="weather-card" aria-live="polite">
+<p style="color:var(--muted)">Type a city and press Search.</p>
+</div>
+</section>
+
+<script src="weather.js"></script>
+</body>
+</html>

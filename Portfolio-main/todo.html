@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>To-Do List</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<section class="section" style="max-width:720px;margin:0 auto;">
+<h1 class="section__title">✅ To-Do List</h1>
+
+<form id="form" autocomplete="off" style="display:flex; gap:10px;">
+<input id="input" type="text" placeholder="What do you need to do?" style="flex:1; padding:10px; border:1px solid var(--border); border-radius:10px; background:var(--card); color:var(--text);" />
+<button class="btn primary" type="submit">Add</button>
+</form>
+
+<div style="display:flex; justify-content:space-between; align-items:center; margin:14px 0;">
+<small id="count" style="color:var(--muted)">0 items</small>
+<div style="display:flex; gap:8px;">
+<button class="btn small" data-filter="all">All</button>
+<button class="btn small" data-filter="active">Active</button>
+<button class="btn small" data-filter="done">Done</button>
+<button class="btn small ghost" id="clearDone">Clear Done</button>
+</div>
+</div>
+
+<ul id="list" class="todo-list"></ul>
+</section>
+
+<script src="todo.js"></script>
+</body>
+</html>

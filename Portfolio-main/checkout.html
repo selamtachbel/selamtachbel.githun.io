@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Checkout</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+.checkout{max-width:760px;margin:72px auto;padding:24px;border-radius:14px;background:#222a;backdrop-filter:blur(6px)}
+.row{display:flex;gap:24px;flex-wrap:wrap}
+.box{flex:1;min-width:260px;padding:16px;border:1px solid #2a2a2a;border-radius:10px;background:#111a}
+.price{font-size:24px;font-weight:800}
+.btn{display:inline-block;padding:10px 18px;border-radius:10px;background:#2962ff;color:#fff}
+.muted{opacity:.7}
+</style>
+</head>
+<body>
+<header class="wrap small">
+<a href="cart.html">← Back to Cart</a>
+</header>
+
+<main class="checkout">
+<h1>Checkout</h1>
+<div class="row">
+<div class="box">
+<h3>Order Summary</h3>
+<div>Total to pay:</div>
+<div class="price" id="pay-total">$0.00</div>
+<div class="muted" style="margin-top:8px">(* demo only—no real payment is processed)</div>
+</div>
+
+<div class="box">
+<h3>Payment Method</h3>
+<label><input type="radio" name="pm" checked> Credit / Debit Card</label><br>
+<label><input type="radio" name="pm"> Mobile Money</label><br>
+<label><input type="radio" name="pm"> Cash on Delivery</label><br><br>
+<button class="btn" onclick="confirmOrder()">Confirm Order</button>
+</div>
+</div>
+</main>
+
+<script>
+// read total passed from cart.js
+const total = sessionStorage.getItem('checkout_total') || '0.00';
+document.getElementById('pay-total').textContent = `$${total}`;
+
+function confirmOrder(){
+alert(`Thank you! Your demo order of $${total} was “placed”.`);
+// clear demo cart after "purchase"
+localStorage.removeItem('cart');
+sessionStorage.removeItem('checkout_total');
+location.href = 'index.html';
+}
+</script>
+</body>
+</html>
+
+

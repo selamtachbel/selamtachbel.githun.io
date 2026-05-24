@@ -1,0 +1,66 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cart</title>
+<link rel="stylesheet" href="style.css" />
+<style>
+.cart{max-width:900px;margin:72px auto;padding:24px;border-radius:14px;background:#222a;backdrop-filter:blur(6px)}
+.cart h1{margin:0 0 16px}
+table{width:100%;border-collapse:collapse}
+th,td{padding:12px;border-bottom:1px solid #2a2a2a;text-align:left}
+.qty{display:flex;align-items:center;gap:8px}
+.qty button{padding:4px 8px;border-radius:6px;border:1px solid #333;background:#111;color:#ddd}
+.btn{display:inline-block;padding:8px 16px;border-radius:10px;background:#2962ff;color:#fff}
+.btn.alt{background:#b22b2b}
+.muted{opacity:.7}
+.total{font-weight:700;text-align:right;margin-top:12px}
+.checkout-actions{display:none;justify-content:flex-end;margin-top:18px}
+.checkout-actions .btn{min-width:140px}
+</style>
+</head>
+<body>
+<header class="wrap small">
+<a href="index.html">← Back to Portfolio</a>
+<nav style="float:right">
+<a href="hair-store.html">Hair</a> •
+<a href="shirts-store.html">Shirts</a> •
+<a href="flowers-store.html">Flowers</a>
+</nav>
+</header>
+
+<main class="cart">
+<h1>Your Cart</h1>
+<div id="cart-root"></div>
+
+<!-- Continue button (hidden when cart empty) -->
+<div id="checkout-actions" class="checkout-actions">
+<button class="btn checkout" onclick="goToCheckout()">Continue</button>
+</div>
+</main>
+
+<script src="cart.js"></script>
+<script>renderCart(document.getElementById('cart-root'));</script>
+</body>
+</html>
+
+<main class="cart">
+<h1>Your Cart</h1>
+
+<div id="cart-root"></div>
+
+<!-- Actions row (hidden until cart has items) -->
+<div id="checkout-actions" class="checkout-actions" style="display:none;">
+<a class="btn alt" href="index.html">← Back to Portfolio</a>
+<button class="btn checkout" onclick="goToCheckout()">Continue</button>
+</div>
+</main>
+
+<script src="cart.js"></script>
+<script>
+// render the table and then toggle the actions bar
+renderCart(document.getElementById('cart-root'));
+</script
+</body>
+</html>

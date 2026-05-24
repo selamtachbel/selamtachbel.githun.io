@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>360° Phone Spin</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<section class="section" style="max-width:920px;margin:0 auto;">
+<h1 class="section__title">📱 360° Phone Spin</h1>
+
+<div class="spin-wrap">
+<div class="spin-stage" id="stage" aria-label="360 degree product view">
+<img id="spinImg" alt="360° phone frame" />
+<div class="spin-hint" id="hint">↔︎ Drag to rotate</div>
+
+<button class="spin-btn left" id="prev" aria-label="Previous frame">‹</button>
+<button class="spin-btn right" id="next" aria-label="Next frame">›</button>
+
+<div class="spin-controls">
+<button class="btn small" id="play">▶ Auto</button>
+<button class="btn small ghost" id="pause">⏸ Stop</button>
+</div>
+</div>
+</div>
+
+<p style="color:var(--muted);text-align:center;margin-top:10px;">
+Works with mouse, touch, and buttons. (Images: <code>assets/phone360/phone-01.jpg ...</code>)
+</p>
+</section>
+
+<script src="spin.js"></script>
+</body>
+</html>

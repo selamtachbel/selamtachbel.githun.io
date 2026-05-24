@@ -1,0 +1,81 @@
+
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Flower Store</title>
+<link rel="stylesheet" href="store.css" />
+</head>
+<body>
+<div class="wrap">
+<header class="topbar">
+<a href="index.html">← Back to Portfolio</a>
+<nav class="mini-nav">
+<a href="hair-store.html">Hair</a> •
+<a href="shirts-store.html">Shirts</a> •
+<strong>Flowers</strong> •
+<a href="cart.html">Cart</a>
+</nav>
+</header>
+
+<h1 class="h1">Flower Store</h1>
+
+<section class="store-grid">
+<article class="card">
+<div class="thumb"><img src="assets/stores/flowers/roses.jpg" alt="Roses"></div>
+<div class="body">
+<h3 class="title">Roses</h3>
+<p class="desc">Classic red bouquet for any occasion.</p>
+<div class="price">$25</div>
+<div class="row">
+<a class="btn" href="cart.html" onclick="addToCart('Roses',25)">Buy Now</a>
+<button class="btn alt" onclick="addToCart('Roses',25)">Add</button>
+</div>
+</div>
+</article>
+
+<article class="card">
+<div class="thumb"><img src="assets/stores/flowers/tulips.jpg" alt="Tulips"></div>
+<div class="body">
+<h3 class="title">Tulips</h3>
+<p class="desc">Soft colors, perfect spring vibe.</p>
+<div class="price">$18</div>
+<div class="row">
+<a class="btn" href="cart.html" onclick="addToCart('Tulips',18)">Buy Now</a>
+<button class="btn alt" onclick="addToCart('Tulips',18)">Add</button>
+</div>
+</div>
+</article>
+
+<article class="card">
+<div class="thumb"><img src="assets/stores/flowers/lilies.jpg" alt="Lilies"></div>
+<div class="body">
+<h3 class="title">Lilies</h3>
+<p class="desc">Elegant stems with gentle fragrance.</p>
+<div class="price">$20</div>
+<div class="row">
+<a class="btn" href="cart.html" onclick="addToCart('Lilies',20)">Buy Now</a>
+<button class="btn alt" onclick="addToCart('Lilies',20)">Add</button>
+</div>
+</div>
+</article>
+
+<article class="card">
+<div class="thumb"><img src="assets/stores/flowers/sunflowers.jpg" alt="Sunflowers"></div>
+<div class="body">
+<h3 class="title">Sunflowers</h3>
+<p class="desc">Bright and happy summer bundle.</p>
+<div class="price">$15</div>
+<div class="row">
+<a class="btn" href="cart.html" onclick="addToCart('Sunflowers',15)">Buy Now</a>
+<button class="btn alt" onclick="addToCart('Sunflowers',15)">Add</button>
+</div>
+</div>
+</article>
+</section>
+</div>
+
+<script src="cart.js"></script>
+</body>
+</html>

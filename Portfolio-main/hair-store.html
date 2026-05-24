@@ -1,0 +1,88 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Hair Store</title>
+<link rel="stylesheet" href="store.css" />
+</head>
+<body>
+<header class="topnav">
+<a href="index.html">← Back to Portfolio</a>
+<nav>
+<a href="hair-store.html"><strong>Hair</strong></a> •
+<a href="shirts-store.html">Shirts</a> •
+<a href="flowers-store.html">Flowers</a>
+</nav>
+</header>
+
+<main class="wrap">
+<h2 class="section_title">Hair Store</h2>
+
+<section class="store-grid">
+
+<!-- Straight -->
+<article class="card">
+<div class="thumb"><img src="assets/stores/hair/straight.jpg" alt="Straight"></div>
+<div class="body">
+<h3 class="title">Straight 18&quot;</h3>
+<p class="desc">Silky straight texture.</p>
+<div class="price">$60</div>
+<div class="row">
+<a class="btn" href="cart.html" onclick="addToCart('Straight 18&quot;', 60)">Buy Now</a>
+<button class="btn alt" onclick="addToCart('Straight 18&quot;', 60)">Add</button>
+</div>
+</div>
+</article>
+
+<!-- Curly -->
+<article class="card">
+<div class="thumb"><img src="assets/stores/hair/curly.jpg" alt="Curly"></div>
+<div class="body">
+<h3 class="title">Curly 16&quot;</h3>
+<p class="desc">Full volume, defined curls.</p>
+<div class="price">$60</div>
+<div class="row">
+<a class="btn" href="cart.html" onclick="addToCart('Curly 16&quot;', 60)">Buy Now</a>
+<button class="btn alt" onclick="addToCart('Curly 16&quot;', 60)">Add</button>
+</div>
+</div>
+</article>
+
+<!-- Body Wave -->
+<article class="card">
+<div class="thumb"><img src="assets/stores/hair/wave.jpg" alt="Body Wave"></div>
+<div class="body">
+<h3 class="title">Body Wave 20&quot;</h3>
+<p class="desc">Soft wave pattern, easy style.</p>
+<div class="price">$65</div>
+<div class="row">
+<a class="btn" href="cart.html" onclick="addToCart('Body Wave 20&quot;', 65)">Buy Now</a>
+<button class="btn alt" onclick="addToCart('Body Wave 20&quot;', 65)">Add</button>
+</div>
+</div>
+</article>
+
+<!-- Closure -->
+<article class="card">
+<div class="thumb"><img src="assets/stores/hair/closure.jpg" alt="Closure"></div>
+<div class="body">
+<h3 class="title">Closure</h3>
+<p class="desc">Matching closure piece.</p>
+<div class="price">$35</div>
+<div class="row">
+<a class="btn" href="cart.html" onclick="addToCart('Closure', 35)">Buy Now</a>
+<button class="btn alt" onclick="addToCart('Closure', 35)">Add</button>
+</div>
+</div>
+</article>
+
+</section>
+</main>
+
+<script src="cart.js"></script>
+</body>
+</html>
+
+
+

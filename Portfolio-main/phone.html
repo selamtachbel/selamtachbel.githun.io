@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1" />
+<title>3D Phone Product Card</title>
+<link rel="stylesheet" href="style.css" />
+</head>
+<body>
+<section class="section" style="max-width:920px;margin:0 auto;">
+<h1 class="section__title">📱 3D Phone Product Card</h1>
+
+<div class="prod-wrap">
+<div class="prod-card" id="card">
+<div class="shine" id="shine"></div>
+
+<div class="prod-media">
+<!-- You can replace these image URLs with your own images -->
+<img id="phoneImg" alt="Phone" src="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop" />
+</div>
+
+<div class="prod-body">
+<h2 class="prod-title">Selam One (128 GB)</h2>
+<p class="prod-sub">6.5” OLED • Dual Cam • 5G</p>
+
+<div class="prod-price">
+<span class="now">$499</span>
+<span class="was">$599</span>
+</div>
+
+<div class="swatches">
+<button class="swatch" data-img="https://images.unsplash.com/photo-1511707171634-5f897ff02aa9?q=80&w=1200&auto=format&fit=crop" style="background:#111;" aria-label="Black"></button>
+<button class="swatch" data-img="https://images.unsplash.com/photo-1580910051074-3eb694886505?q=80&w=1200&auto=format&fit=crop" style="background:#6b7cff;" aria-label="Blue"></button>
+<button class="swatch" data-img="https://images.unsplash.com/photo-1517336714731-489689fd1ca8?q=80&w=1200&auto=format&fit=crop" style="background:#b9b9b9;" aria-label="Silver"></button>
+</div>
+
+<div class="prod-cta">
+<button class="btn primary" id="buyBtn">Add to Cart</button>
+<a class="btn" href="#" target="_blank">Learn More</a>
+</div>
+</div>
+</div>
+</div>
+
+<p style="color:var(--muted);text-align:center;margin-top:10px;">
+Tip: move your mouse over the card (or drag on touch) to tilt. Click the color dots to switch styles.
+</p>
+</section>
+
+<script src="phone.js"></script>
+</body>
+</html>

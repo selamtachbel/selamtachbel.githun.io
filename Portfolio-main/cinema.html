@@ -1,0 +1,186 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8" />
+<meta name="viewport" content="width=device-width,initial-scale=1" />
+<title>Cinema Reservation</title>
+<link rel="stylesheet" href="cinema.css" />
+</head>
+<body>
+<header class="topbar">
+<a class="back" href="index.html">← Back to Portfolio</a>
+<nav class="mini-nav">
+<a href="hair-store.html">Hair</a> •
+<a href="shirts-store.html">Shirts</a> •
+<a href="flowers-store.html">Flowers</a> •
+<strong>Cinema</strong>
+</nav>
+</header>
+
+<main class="cinema">
+<h1>Cinema Reservation</h1>
+
+<!-- Movie gallery -->
+<section class="movies">
+<h2 class="h-sub">Choose a movie</h2>
+<div class="movies-grid" id="movies-grid">
+<!-- Each card: data-id and data-price MUST match your files -->
+<article class="movie-card" data-id="movie1" data-price="10">
+<img src="assets/stores/cinema/movie1.jpg" alt="Movie 1">
+<h3>The Explorer</h3>
+<div class="price">$10</div>
+</article>
+
+<article class="movie-card" data-id="movie2" data-price="12">
+<img src="assets/stores/cinema/movie2.jpg" alt="Movie 2">
+<h3>Sky City</h3>
+<div class="price">$12</div>
+</article>
+
+<article class="movie-card" data-id="movie3" data-price="15">
+<img src="assets/stores/cinema/movie3.jpg" alt="Movie 3">
+<h3>Ocean Deep</h3>
+<div class="price">$15</div>
+</article>
+
+<article class="movie-card" data-id="movie4" data-price="11">
+<img src="assets/stores/cinema/movie4.jpg" alt="Movie 4">
+<h3>Neon Nights</h3>
+<div class="price">$11</div>
+</article>
+
+<article class="movie-card" data-id="movie5" data-price="9">
+<img src="assets/stores/cinema/movie5.jpg" alt="Movie 5">
+<h3>Forest Tale</h3>
+<div class="price">$9</div>
+</article>
+</div>
+</section>
+
+<!-- Current movie & pricing -->
+<div class="controls">
+<div>
+<div class="muted">Selected movie</div>
+<div id="current-movie" class="current-movie">—</div>
+</div>
+<div class="pipe"></div>
+<div>
+<div class="muted">Base price</div>
+<div id="base-price" class="current-price">$0</div>
+</div>
+<div class="pipe"></div>
+<div>
+<div class="muted">VIP add-on</div>
+<div class="current-price">$5</div>
+</div>
+</div>
+
+<!-- Legend -->
+<div class="legend">
+<span class="seat demo"></span> Available
+<span class="seat selected demo"></span> Selected
+<span class="seat reserved demo"></span> Reserved (1h hold)
+<span class="seat occupied demo"></span> Occupied (paid)
+<span class="seat vip demo"></span> VIP Seat
+</div>
+
+<!-- Screen -->
+<div class="screen">SCREEN</div>
+
+<!-- Seats -->
+<div class="seats" id="seats">
+<!-- 8 rows × 10 seats. Add 'vip' or 'occupied' where you want. -->
+<!-- Row A -->
+<div class="row">
+<button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat vip"></button><button class="seat vip"></button>
+<button class="seat vip"></button><button class="seat vip"></button><button class="seat"></button><button class="seat"></button><button class="seat occupied"></button>
+</div>
+<!-- Row B -->
+<div class="row">
+<button class="seat"></button><button class="seat"></button><button class="seat vip"></button><button class="seat vip occupied"></button><button class="seat vip"></button>
+<button class="seat vip"></button><button class="seat vip"></button><button class="seat vip occupied"></button><button class="seat"></button><button class="seat"></button>
+</div>
+<!-- Row C -->
+<div class="row">
+<button class="seat"></button><button class="seat"></button><button class="seat vip"></button><button class="seat vip"></button><button class="seat vip"></button>
+<button class="seat vip"></button><button class="seat vip occupied"></button><button class="seat vip"></button><button class="seat"></button><button class="seat"></button>
+</div>
+<!-- Row D -->
+<div class="row">
+<button class="seat"></button><button class="seat occupied"></button><button class="seat vip"></button><button class="seat vip"></button><button class="seat vip"></button>
+<button class="seat vip"></button><button class="seat vip"></button><button class="seat vip"></button><button class="seat"></button><button class="seat"></button>
+</div>
+<!-- Row E -->
+<div class="row">
+<button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat vip"></button><button class="seat vip"></button>
+<button class="seat vip"></button><button class="seat vip"></button><button class="seat"></button><button class="seat occupied"></button><button class="seat"></button>
+</div>
+<!-- Row F -->
+<div class="row">
+<button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat vip occupied"></button><button class="seat vip"></button>
+<button class="seat vip"></button><button class="seat vip"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button>
+</div>
+<!-- Row G -->
+<div class="row">
+<button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat vip"></button>
+<button class="seat vip"></button><button class="seat vip"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button>
+</div>
+<!-- Row H -->
+<div class="row">
+<button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat"></button><button class="seat vip"></button>
+<button class="seat vip"></button><button class="seat"></button><button class="seat"></button><button class="seat occupied"></button><button class="seat"></button>
+</div>
+</div>
+
+<!-- Summary -->
+<div class="summary">
+<div><strong>Selected:</strong> <span id="count">0</span></div>
+<div><strong>Standard:</strong> <span id="count-std">0</span></div>
+<div><strong>VIP:</strong> <span id="count-vip">0</span></div>
+<div><strong>Total:</strong> $<span id="total">0.00</span></div>
+</div>
+
+<!-- Actions -->
+<div class="actions">
+<button class="btn alt" id="clear">Clear</button>
+<button class="btn" id="reserve" disabled>Reserve</button>
+</div>
+
+<!-- Payment (revealed after Reserve) -->
+<section id="payment" class="payment hidden">
+<h2>Payment</h2>
+<p class="muted">
+Total due: <strong>$<span id="pay-total">0.00</span></strong> ·
+Hold expires in <strong id="hold-timer">—:—:—</strong>
+</p>
+
+<form id="pay-form" onsubmit="return false;">
+<label for="fullname">Full name</label>
+<input id="fullname" type="text" placeholder="Your name" required>
+
+<label for="email">Email</label>
+<input id="email" type="email" placeholder="you@example.com" required>
+
+<fieldset class="pm">
+<legend>Payment method</legend>
+<label><input type="radio" name="pm" value="card" checked> Credit / Debit Card</label>
+<label><input type="radio" name="pm" value="mobile"> Mobile Money</label>
+<label><input type="radio" name="pm" value="cod"> Cash on Delivery</label>
+</fieldset>
+
+<div id="card-fields">
+<label for="card">Card number</label>
+<input id="card" type="text" inputmode="numeric" maxlength="19" placeholder="1234 5678 9012 3456">
+</div>
+
+<div class="payment-actions">
+<button class="btn alt" type="button" id="cancel-pay">Back</button>
+<button class="btn" type="submit" id="pay-now">Pay Now</button>
+</div>
+</form>
+</section>
+</main>
+
+<script src="cinema.js"></script>
+</body>
+</html>
